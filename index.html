@@ -10,9 +10,48 @@
   <body>
     <h1>Julian's Pizzas</h1>
     <div class="container">
+
       <h2>Welcome to Julian's Pizzas!</h2>
       <p>Here at Julian's Pizzas, we make the best pizzas at the best prices, and with some very interesting and unique choices for toppings.</p>
       <h3>Select below the items you would like to order:</h3>
-    </div>
+
+      <h3>Pizza size</h3>
+      <form>
+        <input type="radio" name="pizza-size" value="20" checked>Extra Large(18") <br>
+        <input type="radio" name="pizza-size" value="15">Large(16") <br>
+        <input type="radio" name="pizza-size" value="10">Medium(14") <br>
+        <input type="radio" name="pizza-size" value="6">Personal size
+
+        <h3>Pizza Sauce and Toppings</h3>
+        <div class="form-group">
+          <input type="radio" name="sauce" value="0">Red Sauce<br>
+          <input type="radio" name="sauce" value="2">White Sauce<br>
+          <input type="radio" name="sauce" value="2">Pesto<br>
+        </br>
+          <input type="checkbox" name="toppings" value="1">Pepperoni<br>
+          <input type="checkbox" name="toppings" value="1">Sausage<br>
+          <input type="checkbox" name="toppings" value="1">Bacon<br>
+          <input type="checkbox" name="toppings" value="1">Onion<br>
+          <input type="checkbox" name="toppings" value="1">Spinach<br>
+          <input type="checkbox" name="toppings" value="1">Green Pepper<br>
+          <input type="checkbox" name="toppings" value="1">Marshmallows<br>
+          <input type="checkbox" name="toppings" value="1">Peanut Butter<br>
+          <input type="checkbox" name="toppings" value="3">Kangaroo Meat<br>
+          <input type="checkbox" name="toppings" value="1">Garlic<br>
+        </div>
+
+        <h3>If you'd like to add a side to your order, you can choose that below!</h3>
+        <div class="form-group">
+          <input type="checkbox" name="sides" value="5">Cheesy Bread<br>
+          <input type="checkbox" name="sides" value="3">Chocolate Brownie<br>
+          <input type="checkbox" name="sides" value="6">Garlic Knots<br>
+          <input type="checkbox" name="sides" value="6">Chicken Wings<br>
+        </div>
+
+
+        <button type="submit" class="btn btn-danger">Click here to submit your order!</button>
+      </form>
+
+        </div>
   </body>
 </html>
