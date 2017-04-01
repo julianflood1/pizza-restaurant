@@ -4,6 +4,7 @@ h1 {
   font-size: 80px;
   padding-top: 30px;
   padding-bottom: 30px;
+
 }
 body {
   background-color: #e4c2c2;
@@ -16,8 +17,6 @@ img {
   width: 1200px;
   border: solid black 10px;
 }
-
-
 
 #totalCost {
   display: none;
