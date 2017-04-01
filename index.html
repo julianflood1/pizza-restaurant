@@ -5,11 +5,13 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <title>Julian's Pizzas</title>
   </head>
   <body>
     <h1>Julian's Pizzas</h1>
     <div class="container">
+      <div id="main">
 
       <h2>Welcome to Julian's Pizzas!</h2>
       <p>Here at Julian's Pizzas, we make the best pizzas at the best prices, and with some very interesting and unique choices for toppings.</p>
@@ -23,8 +25,9 @@
         <input type="radio" name="pizza-size" value="6">Personal size
 
         <h3>Pizza Sauce and Toppings</h3>
+        <p><strong>All of Julian's Pizzas include cheese!</strong></p>
         <div class="form-group">
-          <input type="radio" name="sauce" value="0">Red Sauce<br>
+          <input type="radio" name="sauce" value="0" checked>Red Sauce<br>
           <input type="radio" name="sauce" value="2">White Sauce<br>
           <input type="radio" name="sauce" value="2">Pesto<br>
         </br>
@@ -51,10 +54,12 @@
 
         <button type="submit" class="btn btn-danger">Click here to submit your order!</button>
       </form>
+    </div>
 
-      <div id="totalCost">
-        <p>Your total is $<span class="output"></span>! Thank you for shopping at Julian's Pizza!</p>
-      </div>
+    <div id="totalCost">
+      <h2>Your total is $<span class="output"></span>! Thank you for shopping at Julian's Pizza!</h2>
+      <img src="img/pizza.jpg" alt="a picture of pizza">
+    </div>
 
     </div>
   </body>

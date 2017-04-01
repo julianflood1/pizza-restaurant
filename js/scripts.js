@@ -1,23 +1,19 @@
 //Business Logic
-function Pizza(size, toppingsTotal) {
+function Pizza(size, sauce, toppingsTotal) {
   this.size = size;
+  this.sauce = sauce;
   this.toppingsTotal = toppingsTotal;
 }
 
 
 Pizza.prototype.price = function() {
-  return this.size + this.toppingsTotal;
-}
+  return this.size + this.sauce + this.toppingsTotal;
+};
 
 
-// Pizza.prototype.price = function() {
-//   var pizzaTotal = 0;
-//   (this.size + this.toppingsTotal = pizzaTotal);
-// }
 //Front-end Logic
 
 $(document).ready(function() {
-
 
 
   $('form').submit(function(event) {
@@ -26,6 +22,9 @@ $(document).ready(function() {
 
     var size = parseInt($("input[name='pizza-size']:checked").val());
     console.log(size);
+
+    var sauce = parseInt($("input[name='sauce']:checked").val());
+    console.log(sauce);
 
     var toppings = [];
      $("input:checkbox[name=toppings]:checked").each(function() {
@@ -37,7 +36,7 @@ $(document).ready(function() {
       toppingsTotal += toppings[i]
     }
 
-console.log(toppingsTotal);
+    console.log(toppingsTotal);
 
     var sides = [];
      $("input:checkbox[name=sides]:checked").each(function() {
@@ -51,12 +50,16 @@ console.log(toppingsTotal);
     console.log(sidesTotal);
 
 
-    newPizza = new Pizza(size, toppingsTotal);
-    console.log(newPizza.price);
+    var newPizza = new Pizza(size, sauce, toppingsTotal);
+    var pizzaTotal = newPizza.price();
+    var foodTotal = (sidesTotal + pizzaTotal);
+    console.log(foodTotal);
 
-    // var foodTotal = sides + size + toppingsTotal;
-    $('#totalCost').text();
+    $('#main').hide();
+
+    $('#totalCost').fadeIn(400);
+    $('.output').text(foodTotal);
+    
   });
-
 
 });
